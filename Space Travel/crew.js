@@ -1,4 +1,7 @@
-const imageCrew = document.getElementById("image-crew")
+
+
+
+/* const imageCrew = document.getElementById("image-crew")
 const commanderDot = document.getElementById("commander-dot")
 const specialistDot = document.getElementById("specialist-dot")
 const pilotDot = document.getElementById("pilot-dot")
@@ -6,6 +9,8 @@ const engineerDot = document.getElementById("engineer-dot")
 const crewRole = document.getElementById("crew-role")
 const crewName = document.getElementById("crew-name")
 const crewBio = document.getElementById("crew-bio")
+
+
 
 function commander() {
     imageCrew.src = "./assets/crew/image-douglas-hurley.png"
@@ -81,4 +86,4 @@ function engineer() {
             crewName.innerText = engineer.name
             crewBio.innerText = engineer.bio
         })
-}
+} */
