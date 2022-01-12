@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
+      rel="stylesheet">
+      
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <title>Space tourism website</title>
+</head>
+<body class="home">
+  <header class="primary-header flex">
+    <a href="index.html"><img src="./assets/shared/logo.svg" alt="logo" class="logo"></a>
+    <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
+
+    <nav>
+      <span class="line"></span>
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation flex underline-indicators numbered-title">
+        <li class="active"><a href="index.html" class="ff-sans-cond uppercase text-white letter-spacing-2"><span>00</span> home</a></li>
+        <li ><a href="destination.html" class="ff-sans-cond uppercase text-white letter-spacing-2"><span>01</span> destination</a></li>
+        <li ><a href="crew.html" class="ff-sans-cond uppercase text-white letter-spacing-2"><span>02</span> crew</a></li>
+        <li ><a href="technology.html" class="ff-sans-cond uppercase text-white letter-spacing-2"><span>03</span> technology</a></li>      
+      </ul>
+  
+    </nav>
+  </header>
+  <main class="grid header-container">
+    <section class="hero-text flex">
+      <h4 class="ff-sans-cond uppercase text-accent letter-spacing-1">So, you want to travel to
+      <h1 class="ff-serif uppercase fs-800">Space</h1>
+      <p class="text-accent">Let’s face it; if you want to go to space, you might as well genuinely go to 
+        outer space and not hover kind of on the edge of it. Well sit back, and relax 
+        because we’ll give you a truly out of this world experience! </p>
+    </section>
+    <a href="destination.html" class="large-button uppercase ff-serif bg-white text-dark">Explore</a>
+  </main>
+    
+
+  
+  
+    <script src="./index.js"></script>
+    <script src="./tabs.js"></script>
+    <script src="./crew.js"></script>
+    <script src="./technology.js"></script>
+</body>
+</html>
