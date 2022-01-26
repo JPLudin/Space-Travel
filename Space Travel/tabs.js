@@ -1,4 +1,4 @@
-const tabs = document.querySelectorAll(".tabs")
+/* const tabs = document.querySelectorAll(".tabs")
 const place = document.querySelector(".destination-place")
 const description = document.querySelector(".destination-desc")
 const distance = document.querySelector(".destination-distance")
@@ -25,7 +25,7 @@ class Tabs {
         fetch("./data.json")
         .then(response => response.json())
         .then(data => {
-            console.log(id)
+            
             const planet = data.destinations[id]
             planetImg.src = planet.images.png
             place.innerText = planet.name
@@ -39,3 +39,51 @@ class Tabs {
 Array.from(tabs).forEach(el => {
     new Tabs(el)
 })
+ */
+
+const tabs = document.querySelector('.tab-list')
+const buttons = tabs.querySelectorAll('[role="tab"]')
+const tabInfo = document.querySelector('.destination-info')
+
+function handleButtonClick(event) {
+    
+    //alle Tabs verstecken
+    tabInfo.hidden = true
+    //alle Tabs deselektierenr
+    buttons.forEach(button => {
+        button.setAttribute('aria-selected', false)
+    })
+
+    //das ausgewählte Tab selektieren
+
+    event.currentTarget.setAttribute('aria-selected', true)
+
+    //passende Beschreibung dazu ergänzen
+    
+    const idAttribute = event.currentTarget.getAttribute('data-id')
+
+    fetch("./data.json")
+        .then(response => response.json())
+        .then(data => {
+
+            const place = document.querySelector(".destination-place")
+            const description = document.querySelector(".destination-desc")
+            const distance = document.querySelector(".destination-distance")
+            const travel = document.querySelector(".destination-travel")
+            const planetImg = document.querySelector(".image-destination")
+            const planet = data.destinations
+            planet.forEach(planet => {
+                const planetId = planet.id
+                if(idAttribute === planetId) {
+                    planetImg.src = planet.images.png
+                    place.innerText = planet.name
+                    description.innerText = planet.description
+                    distance.textContent = planet.distance
+                    travel.innerText = planet.travel
+                }
+                tabInfo.hidden = false
+            })
+        })
+}
+
+buttons.forEach(button => button.addEventListener('click', handleButtonClick))

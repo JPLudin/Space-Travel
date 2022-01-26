@@ -1,6 +1,19 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* const imageCrew = document.getElementById("image-crew")
 const commanderDot = document.getElementById("commander-dot")
 const specialistDot = document.getElementById("specialist-dot")
